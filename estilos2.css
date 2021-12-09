@@ -1,0 +1,36 @@
+nav {
+  display: flex;
+  justify-content: center;
+}
+li {
+  transition: transform 2s;
+}
+a:hover {
+  transform: scale(2);
+  display: block;
+  width: 10vw;
+}
+div {
+  position: fixed;
+  width: 10vmax;
+  height: 10vmax;
+  background-color: orange;
+  border-radius: 50% 50%;
+  left: 0vw;
+}
+/* esto es para poner una animacion */
+@keyframes mover {
+  from {
+    left: 0vw;
+  }
+  to {
+    left: calc(100vw - 10vmax);
+  }
+  /* va desde la posicion 0 hasta la posicion 100 */
+}
+div {
+  animation: mover 5s linear 1s infinite alternate running;
+  /* el nombre de lo que quiero que se mueva, el tiempo,
+  linear: es la función del movimiento(si empieza lento yva mas rapido, si va todo el tiempo igual, etc)
+  1s:  */
+}
